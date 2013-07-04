@@ -16,8 +16,7 @@ Add the plugin much like any other:
 
 ### Example
 ```javascript
-function onDeviceReady()
-{
+function onDeviceReady() {
   var nowPlaying = window.plugins.nowPlaying;
   artist = "Daft Punk";
   title = "One More Time";
