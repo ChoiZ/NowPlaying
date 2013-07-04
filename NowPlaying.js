@@ -20,8 +20,7 @@
 	};
 	
 	cordovaRef.addConstructor(function(){
-		if(!window.plugins)
-		{
+		if (!window.plugins) {
 			window.plugins = {};
 		}
 		window.plugins.nowPlaying = new NowPlaying();
