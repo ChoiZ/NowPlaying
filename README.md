@@ -6,7 +6,7 @@ PhoneGap / Cordova iOS plugin that allows you to add metadatas in NowPlayingInfo
 Require
 -------
 
-- Phonegap 2.x (doesn't works with phonegap 3.0 yet!)
+- Phonegap 2.x (PhoneGap 3.0 repository: https://github.com/ChoiZ/NowPlaying-Plugin)
 
 Installation
 ------------
