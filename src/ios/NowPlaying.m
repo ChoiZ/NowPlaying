@@ -9,6 +9,8 @@
 
 #import "NowPlaying.h"
 #import <MediaPlayer/MediaPlayer.h>
+#import <MediaPlayer/MPNowPlayingInfoCenter.h>
+#import <MediaPlayer/MPMediaItem.h>
 
 @implementation NowPlaying
 
