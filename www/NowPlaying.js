@@ -6,24 +6,19 @@
 //	Copyright 2013 François LASSERRE. All rights reserved.
 //  MIT Licensed
 //
-(function(){
+(function(cordova) {
 
-	var cordovaRef = window.PhoneGap || window.Cordova || window.cordova; // old to new fallbacks
-
-	var NowPlaying = function() {};
+	function NowPlaying {}
 
 	/**
 	 * Update metadatas.
 	 */
-	NowPlaying.prototype.updateMetas = function(artist,title,album,cover) {
-		cordovaRef.exec(null, null, "NowPlaying", "updateMetas", [artist,title,album,cover]);
+	NowPlaying.prototype.updateMetas = function(artist, title, album, cover) {
+		cordova.exec(null, null, 'NowPlaying', 'updateMetas', [artist, title, album, cover]);
 	};
 
-	cordovaRef.addConstructor(function(){
-		if (!window.plugins) {
-			window.plugins = {};
-		}
-		window.plugins.nowPlaying = new NowPlaying();
+	cordova.addConstructor(function() {
+		window.nowPlaying = new NowPlaying();
 	});
 
-})();
+})(window.cordova || window.Cordova);
