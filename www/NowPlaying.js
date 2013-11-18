@@ -8,7 +8,7 @@
 //
 (function(cordova) {
 
-	function NowPlaying {}
+	function NowPlaying() {}
 
 	/**
 	 * Update metadatas.
