@@ -9,33 +9,31 @@
 
 #import "NowPlaying.h"
 #import <MediaPlayer/MediaPlayer.h>
+#import <MediaPlayer/MPNowPlayingInfoCenter.h>
+#import <MediaPlayer/MPMediaItem.h>
 
 @implementation NowPlaying
 
 - (void) updateMetas:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options
 {
-
 	NSUInteger argc = [arguments count];
-	
+
 	if (argc < 3) { // at a minimum we need artist, title and album...
-		return;	
+		return;
 	}
-	
+
 	NSString *artist = [arguments objectAtIndex:1];
 	NSString *title = [arguments objectAtIndex:2];
 	NSString *album = [arguments objectAtIndex:3];
-    
-	
-  if (NSClassFromString(@"MPNowPlayingInfoCenter"))  {
-    
-    MPNowPlayingInfoCenter *infoCenter = [MPNowPlayingInfoCenter defaultCenter];
-    infoCenter.nowPlayingInfo = [NSDictionary dictionaryWithObjectsAndKeys:
-                                 artist, MPMediaItemPropertyArtist,
-                                 title, MPMediaItemPropertyTitle,
-                                 album, MPMediaItemPropertyAlbumTitle,
-                                 nil];
-  }
-    
+
+	if (NSClassFromString(@"MPNowPlayingInfoCenter"))  {
+		MPNowPlayingInfoCenter *infoCenter = [MPNowPlayingInfoCenter defaultCenter];
+		infoCenter.nowPlayingInfo = [NSDictionary dictionaryWithObjectsAndKeys:
+									 artist, MPMediaItemPropertyArtist,
+									 title, MPMediaItemPropertyTitle,
+									 album, MPMediaItemPropertyAlbumTitle,
+									 nil];
+	}
 }
 
 @end
