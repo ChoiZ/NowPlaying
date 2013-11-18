@@ -13,9 +13,9 @@
 
 - (void)updateMetas:(CDVInvokedUrlCommand*)command
 {
-	NSString *artist = [command.arguments objectAtIndex:1];
-	NSString *title = [command.arguments objectAtIndex:2];
-	NSString *album = [command.arguments objectAtIndex:3];
+	NSString *artist = [command.arguments objectAtIndex:0];
+	NSString *title = [command.arguments objectAtIndex:1];
+	NSString *album = [command.arguments objectAtIndex:2];
 
 	if (NSClassFromString(@"MPNowPlayingInfoCenter"))  {
 		MPNowPlayingInfoCenter *infoCenter = [MPNowPlayingInfoCenter defaultCenter];
