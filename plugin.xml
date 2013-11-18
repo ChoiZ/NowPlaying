@@ -8,19 +8,17 @@
 	    <engine name="cordova" version=">=3.0.0" />
 	</engines>
 
-	<name>NowPlaying</name>
+	<name>now-playing</name>
 
 	<description>iOS native lock-screen now-playing API.</description>
 
 	<js-module src="www/nowplaying.js" name="nowPlaying">
-		<clobbers target="nowPlaying" />
+		<clobbers target="window.nowPlaying" />
 	</js-module>
 
 	<author> François Lasserre, Michael Gauthier</author>
 
 	<license>MIT License</license>
-
-	<asset src="www/NowPlaying.js" target="NowPlaying.js" />
 
 	<platform name="ios">
 		<config-file target="config.xml" parent="/*">
