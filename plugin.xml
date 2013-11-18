@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
 	xmlns:android="http://schemas.android.com/apk/res/android"
-	id="com.silverorange.NowPlaying"
+	id="com.silverorange.now-playing"
 	version="1.0.0">
 
 	<engines>
@@ -9,16 +9,19 @@
 	</engines>
 
 	<name>now-playing</name>
+	<keywords>lockscreen,media,now,playing</keywords>
 
 	<description>iOS native lock-screen now-playing API.</description>
 
-	<js-module src="www/nowplaying.js" name="nowPlaying">
-		<clobbers target="window.nowPlaying" />
+	<js-module src="www/nowplaying.js" name="now-playing">
+		<clobbers target="window.NowPlaying" />
 	</js-module>
 
 	<author> François Lasserre, Michael Gauthier</author>
 
 	<license>MIT License</license>
+
+	<info>You need to add the MediaPlayer framwork to the list of libraries linked to the project in Build Phases in Xcode.</info>
 
 	<platform name="ios">
 		<config-file target="config.xml" parent="/*">
@@ -26,7 +29,6 @@
 				<param name="ios-package" value="NowPlaying" />
 			</feature>
 		</config-file>
-		<plugins-plist key="NowPlaying" string="NowPlaying" />
 		<header-file src="src/ios/NowPlaying.h" />
 		<source-file src="src/ios/NowPlaying.m" />
 	</platform>
