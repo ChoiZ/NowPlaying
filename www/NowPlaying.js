@@ -17,8 +17,6 @@
 		cordova.exec(null, null, 'NowPlaying', 'updateMetas', [artist, title, album, cover]);
 	};
 
-	cordova.addConstructor(function() {
-		window.nowPlaying = new NowPlaying();
-	});
+	module.exports = new NowPlaying();
 
 })(window.cordova || window.Cordova);
