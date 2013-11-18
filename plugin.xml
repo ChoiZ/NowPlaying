@@ -12,8 +12,8 @@
 
 	<description>iOS native lock-screen now-playing API.</description>
 
-	<js-module src="www/nowplaying.js" name="NowPlaying">
-		<clobbers target="cordova.nowPlaying" />
+	<js-module src="www/nowplaying.js" name="nowPlaying">
+		<clobbers target="nowPlaying" />
 	</js-module>
 
 	<author> François Lasserre, Michael Gauthier</author>
@@ -28,7 +28,7 @@
 				<param name="ios-package" value="NowPlaying" />
 			</feature>
 		</config-file>
-		<plugins-plist key="NowPlaying" string="CDVNowPlaying" />
+		<plugins-plist key="NowPlaying" string="NowPlaying" />
 		<header-file src="src/ios/NowPlaying.h" />
 		<source-file src="src/ios/NowPlaying.m" />
 	</platform>
