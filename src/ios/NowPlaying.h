@@ -14,6 +14,6 @@
 @interface NowPlaying : CDVPlugin {
 }
 
-- (void)updateMetas:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options;
+- (void)updateMetas:(CDVInvokedUrlCommand*)command;
 
 @end

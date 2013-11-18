@@ -14,17 +14,11 @@
 
 @implementation NowPlaying
 
-- (void) updateMetas:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options
+- (void)updateMetas:(CDVInvokedUrlCommand*)command
 {
-	NSUInteger argc = [arguments count];
-
-	if (argc < 3) { // at a minimum we need artist, title and album...
-		return;
-	}
-
-	NSString *artist = [arguments objectAtIndex:1];
-	NSString *title = [arguments objectAtIndex:2];
-	NSString *album = [arguments objectAtIndex:3];
+	NSString *artist = [command.arguments objectAtIndex:1];
+	NSString *title = [command.arguments objectAtIndex:2];
+	NSString *album = [command.arguments objectAtIndex:3];
 
 	if (NSClassFromString(@"MPNowPlayingInfoCenter"))  {
 		MPNowPlayingInfoCenter *infoCenter = [MPNowPlayingInfoCenter defaultCenter];
