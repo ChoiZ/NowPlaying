@@ -9,11 +9,12 @@
 
 #import <Cordova/CDVPlugin.h>
 #import <MediaPlayer/MediaPlayer.h>
-
+#import <MediaPlayer/MPNowPlayingInfoCenter.h>
+#import <MediaPlayer/MPMediaItem.h>
 
 @interface NowPlaying : CDVPlugin {
 }
 
-- (void)updateMetas:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options;
+- (void)updateMetas:(CDVInvokedUrlCommand*)command;
 
 @end
