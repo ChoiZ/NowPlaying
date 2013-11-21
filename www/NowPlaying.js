@@ -1,10 +1,10 @@
 //
-//  NowPlaying.js
-//	Now Playing Cordova Plugin
+// NowPlaying.js
+// Now Playing Cordova Plugin
 //
-//	Created by François LASSERRE on 12/05/13.
-//	Copyright 2013 François LASSERRE. All rights reserved.
-//  MIT Licensed
+// Created by François LASSERRE on 12/05/13.
+// Copyright 2013 François LASSERRE. All rights reserved.
+// MIT Licensed
 //
 (function(cordova) {
 
