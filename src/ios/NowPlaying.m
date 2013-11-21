@@ -13,18 +13,18 @@
 
 - (void)updateMetas:(CDVInvokedUrlCommand*)command
 {
-	NSString *artist = [command.arguments objectAtIndex:0];
-	NSString *title = [command.arguments objectAtIndex:1];
-	NSString *album = [command.arguments objectAtIndex:2];
+    NSString *artist = [command.arguments objectAtIndex:0];
+    NSString *title = [command.arguments objectAtIndex:1];
+    NSString *album = [command.arguments objectAtIndex:2];
 
-	if (NSClassFromString(@"MPNowPlayingInfoCenter"))  {
-		MPNowPlayingInfoCenter *infoCenter = [MPNowPlayingInfoCenter defaultCenter];
-		infoCenter.nowPlayingInfo = [NSDictionary dictionaryWithObjectsAndKeys:
-									 artist, MPMediaItemPropertyArtist,
-									 title, MPMediaItemPropertyTitle,
-									 album, MPMediaItemPropertyAlbumTitle,
-									 nil];
-	}
+    if (NSClassFromString(@"MPNowPlayingInfoCenter"))  {
+        MPNowPlayingInfoCenter *infoCenter = [MPNowPlayingInfoCenter defaultCenter];
+        infoCenter.nowPlayingInfo = [NSDictionary dictionaryWithObjectsAndKeys:
+                                     artist, MPMediaItemPropertyArtist,
+                                     title, MPMediaItemPropertyTitle,
+                                     album, MPMediaItemPropertyAlbumTitle,
+                                     nil];
+    }
 }
 
 @end

@@ -1,38 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-	xmlns:android="http://schemas.android.com/apk/res/android"
-	id="com.silverorange.now-playing"
-	version="1.0.0">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="com.silverorange.now-playing"
+    version="1.0.0">
 
-	<engines>
-	    <engine name="cordova" version=">=3.0.0" />
-	</engines>
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
 
-	<name>now-playing</name>
-	<keywords>lockscreen,media,now,playing</keywords>
+    <name>now-playing</name>
+    <keywords>lockscreen,media,now,playing</keywords>
 
-	<description>iOS native lock-screen now-playing API.</description>
+    <description>iOS native lock-screen now-playing API.</description>
 
-	<js-module src="www/nowplaying.js" name="now-playing">
-		<clobbers target="window.NowPlaying" />
-	</js-module>
+    <js-module src="www/nowplaying.js" name="now-playing">
+        <clobbers target="window.NowPlaying" />
+    </js-module>
 
-	<author> François Lasserre, Michael Gauthier</author>
+    <author>François LASSERRE, Michael GAUTHIER</author>
 
-	<license>MIT License</license>
+    <license>MIT License</license>
 
-	<info>You need to add the MediaPlayer framwork to the list of libraries linked to the project in Build Phases in Xcode.</info>
+    <info>You need to add the MediaPlayer framwork to the list of libraries linked to the project in Build Phases in Xcode.</info>
 
-	<platform name="ios">
-		<config-file target="config.xml" parent="/*">
-			<feature name="NowPlaying">
-				<param name="ios-package" value="NowPlaying" />
-			</feature>
-		</config-file>
-		<header-file src="src/ios/NowPlaying.h" />
-		<source-file src="src/ios/NowPlaying.m" />
-	</platform>
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="NowPlaying">
+                <param name="ios-package" value="NowPlaying" />
+            </feature>
+        </config-file>
+        <header-file src="src/ios/NowPlaying.h" />
+        <source-file src="src/ios/NowPlaying.m" />
+    </platform>
 
 </plugin>
-
-

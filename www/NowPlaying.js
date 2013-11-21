@@ -8,15 +8,15 @@
 //
 (function(cordova) {
 
-	function NowPlaying() {}
+    function NowPlaying() {}
 
-	/**
-	 * Update metadatas.
-	 */
-	NowPlaying.prototype.updateMetas = function(artist, title, album, cover) {
-		cordova.exec(null, null, 'NowPlaying', 'updateMetas', [artist, title, album, cover]);
-	};
+    /**
+     * Update metadatas.
+     */
+    NowPlaying.prototype.updateMetas = function(artist, title, album, cover) {
+        cordova.exec(null, null, 'NowPlaying', 'updateMetas', [artist, title, album, cover]);
+    };
 
-	module.exports = new NowPlaying();
+    module.exports = new NowPlaying();
 
 })(window.cordova || window.Cordova);
