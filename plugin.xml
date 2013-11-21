@@ -21,7 +21,7 @@
 
     <license>MIT License</license>
 
-    <info>You need to add the MediaPlayer framwork to the list of libraries linked to the project in Build Phases in Xcode.</info>
+    <info>You need to add the MediaPlayer framework to the list of libraries linked to the project in Build Phases in Xcode.</info>
 
     <platform name="ios">
         <config-file target="config.xml" parent="/*">
