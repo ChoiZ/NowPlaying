@@ -6,35 +6,18 @@ PhoneGap / Cordova iOS plugin that allows you to add metadatas in NowPlayingInfo
 Require
 -------
 
-- PhoneGap / Cordova 3.x
-(Thanks to @gauthierm)
+- PhoneGap / Cordova 4.x
 
 Old version
 -----------
 
-- PhoneGap / Cordova 2.x repository: https://github.com/ChoiZ/NowPlaying/tree/phonegap2)
+- PhoneGap / Cordova 3.x branch: https://github.com/ChoiZ/NowPlaying/tree/cordova-3)
+- PhoneGap / Cordova 2.x branch: https://github.com/ChoiZ/NowPlaying/tree/cordova-2)
 
 Installation
 ------------
 
-Add the plugin much like any other:
-
-1. Add MediaPlayer.framework in your project.
-2. Add the NowPlaying.h and NowPlaying.m classes to your Plugins folder in Xcode
-3. Add the NowPlaying.js file to your www folder
-4. Add the NowPlaying.js to your html file. eg: `<script type="text/javascript" charset="utf-8" src="NowPlaying.js"></script>`
-5. Add the plugin to your config.xml: `<plugin name="NowPlaying" value="NowPlaying" />` (or if you are running an older version of PhoneGap / Cordova, Cordova.plist under Plugins (key: "NowPlaying" value: "NowPlaying"))
-
-### Example
-```javascript
-function onDeviceReady() {
-  var nowPlaying = window.plugins.nowPlaying;
-  artist = "Daft Punk";
-  title = "One More Time";
-  album = "Discovery";
-  nowPlaying.updateMetas(artist,title,station);
-}
-```
+Soon a new installation for PhoneGap / Cordova 4.x
 
 ## License
 
