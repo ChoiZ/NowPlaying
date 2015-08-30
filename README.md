@@ -7,12 +7,6 @@ Require
 -------
 
 - PhoneGap / Cordova 3.x
-(Thanks to @gauthierm)
-
-Old version
------------
-
-- PhoneGap / Cordova 2.x repository: https://github.com/ChoiZ/NowPlaying/tree/phonegap2)
 
 Installation
 ------------
@@ -35,6 +29,8 @@ function onDeviceReady() {
   nowPlaying.updateMetas(artist,title,station);
 }
 ```
+
+Special thanks to @gauthierm
 
 ## License
 
