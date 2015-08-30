@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="fr.choiz.nowplaying" version="4.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>NowPlaying</name>
+    <description>iOS native lock-screen NowPlaying API.</description>
+    <license>MIT License</license>
+    <keywords>lockscreen, media, now, playing, cover</keywords>
+    <author>François LASSERRE</author>
+
+    <engines>
+        <engine name="cordova" version=">=4.0.0"></engine>
+    </engines>
+
+    <js-module name="NowPlaying" src="www/NowPlaying.js">
+        <clobbers target="cordova.plugins.NowPlaying" />
+    </js-module>
+
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="NowPlaying">
+                <param name="ios-package" value="NowPlaying"/>
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/NowPlaying.h" />
+        <source-file src="src/ios/NowPlaying.m" />
+
+        <framework src="MediaPlayer.framework" />
+    </platform>
+</plugin>

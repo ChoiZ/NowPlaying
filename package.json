@@ -1,0 +1,36 @@
+{
+  "name": "NowPlaying",
+  "version": "4.0.0",
+  "description": "iOS native lock-screen NowPlaying API.",
+  "cordova": {
+    "id": "fr.choiz.nowplaying",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChoiZ/NowPlaying/"
+  },
+  "keywords": [
+    "lockscreen",
+    "media",
+    "now",
+    "playing",
+    "cover",
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=4.0.0"
+    }
+  ],
+  "author": "François LASSERRE",
+  "license": "MIT License",
+  "bugs": {
+    "url": "https://github.com/ChoiZ/NowPlaying/issues"
+  },
+  "homepage": "https://github.com/ChoiZ/NowPlaying#readme"
+}
